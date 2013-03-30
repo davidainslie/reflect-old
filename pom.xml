@@ -359,13 +359,8 @@
     <distributionManagement>
         <repository>
             <id>repo</id>
-            <url>https://github.com/davidainslie/reflect-old/raw/master/releases</url>
+            <url>https://github.com/davidainslie/reflect-old</url>
         </repository>
-        
-        <snapshotRepository>
-            <id>snapshot-repo</id>
-            <url>https://github.com/davidainslie/reflect-old/raw/master/snapshots</url>
-        </snapshotRepository>
     </distributionManagement>
     
 </project>
