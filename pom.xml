@@ -359,7 +359,7 @@
     <distributionManagement>
         <repository>
             <id>repo</id>
-            <url>https://github.com/davidainslie/reflect-old</url>
+            <url>https://github.com/davidainslie/reflect-old.git</url>
         </repository>
     </distributionManagement>
     
