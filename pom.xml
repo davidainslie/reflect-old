@@ -20,6 +20,9 @@
         <!-- Ensure that the build is consistent across all platforms i.e. platform independent encoding -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         
+        <!--maven variable which points to your local repository -->
+        <internal.repo.path>file:///C:/Maven/repository/</internal.repo.path>
+        
         <java.version>1.7</java.version>
         <javaee.version>6.0</javaee.version>        
         <aspectj.version>1.7.0</aspectj.version>
@@ -35,6 +38,10 @@
     </properties>
         
     <repositories>
+        <repository>
+            <id>synergian-repo</id>
+            <url>https://raw.github.com/synergian/wagon-git/releases</url>
+        </repository>
     </repositories>    
 
     <dependencies>        
@@ -125,8 +132,8 @@
     </dependencyManagement>
 
     <build>
-        <finalName>${project.groupId}.${project.artifactId}-${project.version}</finalName>
-
+        <finalName>${project.groupId}.${project.artifactId}-${project.version}</finalName>        
+  
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -358,8 +365,9 @@
     
     <distributionManagement>
         <repository>
-            <id>repo</id>
-            <url>https://github.com/davidainslie/reflect-old.git</url>
+            <id>internal.repo</id>
+            <name>Internal Repository</name>
+            <url>${internal.repo.path}</url>
         </repository>
     </distributionManagement>
     
